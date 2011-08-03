@@ -13,3 +13,6 @@
 ;;(load "/usr/share/doc/git-1.7.4.4/contrib/emacs/git-blame.el")
 (add-to-list 'vc-handled-backends 'GIT)
 
+;; rpm-spec-mode settings
+(setq-default rpm-spec-user-mail-address "elemc AT atisserv DOT ru")
+(setq-default rpm-spec-user-full-name "Alexei Panov")
