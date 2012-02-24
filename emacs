@@ -17,6 +17,11 @@
 (setq-default rpm-spec-user-mail-address "me AT elemc DOT name")
 (setq-default rpm-spec-user-full-name "Alexei Panov")
 
+(autoload 'rpm-spec-mode "rpm-spec-mode.el" "RPM spec mode." t)
+ (setq auto-mode-alist (append '(("\\.spec" . rpm-spec-mode))
+ 			       auto-mode-alist))
+
+
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (custom-set-variables
