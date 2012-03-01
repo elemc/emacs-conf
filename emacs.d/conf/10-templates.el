@@ -26,7 +26,7 @@
   "\n"
   "\n"
   "if __name__ == '__main__':\n"
-  "    \n"
+  "\n"
 )
 
 (define-skeleton template-python-class
@@ -42,11 +42,11 @@
   "\n"
   "\n"
   "class SomeClass:\n"
-  "    def __init__(self):\n"
-  "        pass\n"
+  "\tdef __init__(self):\n"
+  "\t\tpass\n"
   "\n"
-  "    def __del__(self):\n"
-  "        pass\n"
+  "\tdef __del__(self):\n"
+  "\t\tpass\n"
 )
 
 (define-skeleton template-bash-minimal
