@@ -42,11 +42,11 @@
   "\n"
   "\n"
   "class SomeClass:\n"
-  "\tdef __init__(self):\n"
-  "\t\tpass\n"
+  "    def __init__(self):\n"
+  "        pass\n"
   "\n"
-  "\tdef __del__(self):\n"
-  "\t\tpass\n"
+  "    def __del__(self):\n"
+  "        pass\n"
 )
 
 (define-skeleton template-bash-minimal
