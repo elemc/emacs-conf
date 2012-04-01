@@ -21,6 +21,7 @@
  (setq auto-mode-alist (append '(("\\.spec" . rpm-spec-mode))
  			       auto-mode-alist))
 
+(setq-default indent-tabs-mode nil)
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -32,6 +33,7 @@
  '(custom-enabled-themes (quote (deeper-blue)))
  '(inhibit-startup-screen t)
  '(tab-width 4)
+ '(indent-tab-mode nil)
  '(tool-bar-mode nil))
 
 (custom-set-faces
