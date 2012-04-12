@@ -3,7 +3,8 @@
       (global-set-key (kbd "M-c") 'clipboard-kill-ring-save)
       (global-set-key (kbd "M-x") 'clipboard-kill-region)
       (global-set-key (kbd "M-v") 'clipboard-yank)
-      (global-set-key (kbd "M-s") 'save-buffer)))
+      (global-set-key (kbd "M-s") 'save-buffer)
+      (global-set-key (kbd "M-w") 'kill-buffer-and-window)))
 (if (eq system-type 'darwin)
     (progn
       (global-set-key (kbd "s-c") 'clipboard-kill-ring-save)
@@ -11,4 +12,6 @@
       (global-set-key (kbd "s-v") 'clipboard-yank)
       (global-set-key (kbd "s-s") 'save-buffer)
       (global-set-key (kbd "s-<right>") 'end-of-line)
-      (global-set-key (kbd "s-<left>") 'beginning-of-line)))
+      (global-set-key (kbd "s-<left>") 'beginning-of-line)
+      (global-set-key (kbd "s-w") 'kill-buffer-and-window)
+      (global-set-key (kbd "<kp-delete>") 'delete-char)))
