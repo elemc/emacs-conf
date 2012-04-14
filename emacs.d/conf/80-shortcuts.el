@@ -1,7 +1,6 @@
 (if (eq system-type 'gnu/linux)
     (progn
       (global-set-key (kbd "M-c") 'clipboard-kill-ring-save)
-      (global-set-key (kbd "M-x") 'clipboard-kill-region)
       (global-set-key (kbd "M-v") 'clipboard-yank)
       (global-set-key (kbd "M-s") 'save-buffer)
       (global-set-key (kbd "M-w") 'kill-buffer-and-window)))
