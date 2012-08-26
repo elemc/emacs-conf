@@ -1,12 +1,11 @@
 (if (eq system-type 'gnu/linux)
     (progn
       (global-set-key (kbd "M-c") 'clipboard-kill-ring-save)
-      (global-set-key (kbd "M-x") 'clipboard-kill-region)
       (global-set-key (kbd "M-v") 'clipboard-yank)
       (global-set-key (kbd "M-s") 'save-buffer)
-      (global-set-key (kbd "M-w") 'kill-buffer-and-window)
       (global-set-key (kbd "C-c C-.") 'next-multiframe-window)
       (global-set-key (kbd "C-c C-,") 'previous-multiframe-window)))
+      (global-set-key (kbd "M-s") 'save-buffer)))
 (if (eq system-type 'darwin)
     (progn
       (global-set-key (kbd "s-c") 'clipboard-kill-ring-save)
@@ -19,3 +18,4 @@
       (global-set-key (kbd "<kp-delete>") 'delete-char)
       (global-set-key (kbd "C-c C-.") 'next-multiframe-window)
       (global-set-key (kbd "C-c C-,") 'previous-multiframe-window)))
+      (global-set-key (kbd "<kp-delete>") 'delete-char)))
