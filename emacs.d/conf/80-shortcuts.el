@@ -5,7 +5,6 @@
       (global-set-key (kbd "M-s") 'save-buffer)
       (global-set-key (kbd "C-c C-.") 'next-multiframe-window)
       (global-set-key (kbd "C-c C-,") 'previous-multiframe-window)))
-      (global-set-key (kbd "M-s") 'save-buffer)))
 (if (eq system-type 'darwin)
     (progn
       (global-set-key (kbd "s-c") 'clipboard-kill-ring-save)
@@ -18,4 +17,4 @@
       (global-set-key (kbd "<kp-delete>") 'delete-char)
       (global-set-key (kbd "C-c C-.") 'next-multiframe-window)
       (global-set-key (kbd "C-c C-,") 'previous-multiframe-window)))
-      (global-set-key (kbd "<kp-delete>") 'delete-char)))
+
