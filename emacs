@@ -31,9 +31,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (deeper-blue)))
+ '(indent-tab-mode nil)
  '(inhibit-startup-screen t)
  '(tab-width 4)
- '(indent-tab-mode nil)
  '(tool-bar-mode nil))
 
 (custom-set-faces
@@ -41,7 +41,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Monaco" :foundry "unknown" :slant normal :weight normal :height 98 :width normal)))))
 
 ;;(global-set-key (kbd "M-\ ") 'toggle-input-method)
 (global-unset-key (kbd "M-SPC"))
+(desktop-save-mode 1)
