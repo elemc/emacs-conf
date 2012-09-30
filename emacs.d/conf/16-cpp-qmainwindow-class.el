@@ -1,4 +1,4 @@
-(defun elemc-skel-qdialog-cpp-class (name)
+(defun elemc-skel-qmainwindow-cpp-class (name)
   (interactive "sclass name: ")
   (let* ((header-file-name (concat (downcase name) ".h"))
          (header-include-string (upcase (concat name "_H")))
@@ -12,7 +12,7 @@
     (insert (concat
              "// -*- C++ -*-\n"
              "/* ------------------------------------ */\n"
-             "/* C++ class header (QDialog)           */\n"
+             "/* C++ class header (QMainWindow)       */\n"
              "/* Author: Alexei Panov <me@elemc.name> */\n"
              "/* ------------------------------------ */\n"
              "/* Name: " name "\n"
@@ -21,12 +21,12 @@
              "#ifndef " header-include-string "\n"
              "#define " header-include-string "\n"
              "\n"
-             "#include <QtGui/QDialog>\n"
+             "#include <QtGui/QMainWindow>\n"
              "\n"
              "namespace Ui {\n"
              "class " name ";\n"
              "}\n\n"
-             "class " name " : public QDialog\n"
+             "class " name " : public QMainWindow\n"
              "{\n"
              "Q_OBJECT\n"
              "public:\n"
@@ -51,7 +51,7 @@
 	(insert (concat
              "// -*- C++ -*-\n"
              "/* ------------------------------------ */\n"
-             "/* C++ class source (QDialog)           */\n"
+             "/* C++ class source (QMainWindow)       */\n"
              "/* Author: Alexei Panov <me@elemc.name> */\n"
              "/* ------------------------------------ */\n"
              "/* Name: " name "\n"
@@ -59,7 +59,7 @@
              "*/\n"
              "#include \"" header-file-name "\"\n"
              "#include \"ui_" header-file-name "\"\n\n"
-             name ":" name " (QWidget *parent, Qt::WindowFlags f) :\n QDialog(parent, f),\nui(new Ui::" name ")\n"
+             name ":" name " (QWidget *parent, Qt::WindowFlags f) :\n QMainWindow(parent, f),\nui(new Ui::" name ")\n"
              "{\n"
              "\tui->setupUi(this);\n"
              "}\n"

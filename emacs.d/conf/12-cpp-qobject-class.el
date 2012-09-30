@@ -27,10 +27,11 @@
              "{\n"
              "Q_OBJECT\n"
              "public:\n"
-             "\t" name "(QObject *parent = 0);\n"
+             "\t explicit " name "(QObject *parent = 0);\n"
              "\t~" name "();\n"
              "\n"
              "private:\n\n"
+             "signals:\n\n"
              "public slots:\n\n"
              "};\n\n"
              "#endif\n"))
