@@ -11,7 +11,9 @@
 
 ;;(load "/usr/share/doc/git-1.7.4.4/contrib/emacs/git.el")
 ;;(load "/usr/share/doc/git-1.7.4.4/contrib/emacs/git-blame.el")
-(add-to-list 'vc-handled-backends 'GIT)
+(if (eq system-type 'gnu/linux)
+    (progn
+    (add-to-list 'vc-handled-backends 'GIT)))
 
 ;; rpm-spec-mode settings
 (setq-default rpm-spec-user-mail-address "me AT elemc DOT name")
