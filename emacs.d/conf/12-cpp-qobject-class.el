@@ -55,10 +55,10 @@
              "   Description:\n"
              "*/\n"
              "#include \"" header-file-name "\"\n\n"
-             name ":" name " (QObject *parent)\ :\nQObject(parent)\n"
+             name "::" name " (QObject *parent)\ :\nQObject(parent)\n"
              "{\n"
-             "}\n"
-             name ":~" name " ()\n"
+             "}\n\n"
+             name "::~" name " ()\n"
              "{\n"
              "}\n"
              ))

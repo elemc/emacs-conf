@@ -54,10 +54,10 @@
              "   Description:\n"
              "*/\n"
              "#include \"" header-file-name "\"\n\n"
-             name ":" name " (QWidget *parent, Qt::WindowFlags f) :\n QWidget(parent, f)\n"
+             name "::" name " (QWidget *parent, Qt::WindowFlags f) :\n QWidget(parent, f)\n"
              "{\n"
-             "}\n"
-             name ":~" name " ()\n"
+             "}\n\n"
+             name "::~" name " ()\n"
              "{\n"
              "}\n"
              ))

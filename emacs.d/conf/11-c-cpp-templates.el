@@ -94,6 +94,22 @@
     (beginning-of-buffer)
     (while (and (not (eobp)) (forward-line))
       (indent-according-to-mode))
+
+    ;; resource file
+	(set-buffer (get-buffer-create qrc-file-name))
+	(set-visited-file-name qrc-file-name)
+	(switch-to-buffer (current-buffer))
+	(c++-mode)
+	(turn-on-font-lock)
+	(insert (concat
+             "<RCC>\n"
+             "</RCC>\n"
+             ))
+    (beginning-of-buffer)
+    (while (and (not (eobp)) (forward-line))
+      (indent-according-to-mode))
+
+
     (beginning-of-buffer)
     (search-forward "Description:")
     )
