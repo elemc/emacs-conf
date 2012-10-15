@@ -61,7 +61,7 @@
 (add-hook 'c++-mode-common-hook 'elemc/c-cpp-cedet-hook)
 
 (add-hook 'python-mode-common-hook 'elemc/cedet-hook)
-(add-hook 'emacs-lisp-mode-common-hook 'elemc/cedet-hook)
+(add-hook 'emacs-lisp-mode-hook 'elemc/cedet-hook)
 
 
 ;; ;; gnu global support
