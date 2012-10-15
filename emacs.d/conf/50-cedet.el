@@ -119,3 +119,15 @@
 (global-set-key [f8] 'elemc/cmake-release)
 (global-set-key [f9] 'elemc/compile)
   
+;; Qt headers
+(setq qt4-base-dir "/usr/include")
+
+;; Only for Mac OS X
+(if (eq system-type 'darwin)
+    (setq qt4-base-dir "/Users/alex/tools/qt/4.8.3/include"))
+
+(semantic-add-system-include qt4-base-dir 'c++-mode)
+(add-to-list 'auto-mode-alist (cons qt4-base-dir 'c++-mode))
+(add-to-list 'semantic-lex-c-preprocessor-symbol-file (concat qt4-base-dir "/Qt/qconfig.h"))
+(add-to-list 'semantic-lex-c-preprocessor-symbol-file (concat qt4-base-dir "/Qt/qconfig-dist.h"))
+(add-to-list 'semantic-lex-c-preprocessor-symbol-file (concat qt4-base-dir "/Qt/qglobal.h"))
