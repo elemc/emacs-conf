@@ -84,12 +84,15 @@
 (setq compilation-scroll-output t)
 (setq mode-compile-always-save-buffer-p t)
 
+(setq elemc/cmake-debug-command "mkdir -p build; pushd build; cmake -DCMAKE_BUILD_TYPE=Debug .. ; popd")
+(setq elemc/cmake-release-command "mkdir -p build; pushd build; cmake -DCMAKE_BUILD_TYPE=Release .. ; popd")
+(setq elemc/compile-command "pushd build; make -j2 -k; popd")
 
 (defun elemc/cmake-debug ()
   "save and call cmake"
   (interactive)
   (save-some-buffers t)
-  (compile "mkdir -p build; pushd build; cmake -DCMAKE_BUILD_TYPE=Debug .. ; popd")
+  (compile elemc/cmake-debug-command)
   (message "CMake debug")
   )
 
@@ -97,7 +100,7 @@
   "save and call cmake"
   (interactive)
   (save-some-buffers t)
-  (compile "mkdir -p build; pushd build; cmake -DCMAKE_BUILD_TYPE=Release .. ; popd")
+  (compile elemc/cmake-release-command)
   (message "CMake release")
   )
 
@@ -105,7 +108,7 @@
   "save and call make"
   (interactive)
   (save-some-buffers t)
-  (compile "pushd build; make -j2; popd")
+  (compile elemc/compile-command)
   (message "Build project")
   )
 
@@ -135,3 +138,5 @@
 (when (cedet-ectag-version-check t)
   (require 'semanticdb-ectag)
   (semantic-load-enable-primary-exuberent-ctags-support))
+
+(setq enable-local-variables :all)
