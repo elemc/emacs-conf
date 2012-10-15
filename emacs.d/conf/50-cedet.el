@@ -70,11 +70,6 @@
   (semanticdb-enable-gnu-global-databases 'c-mode)
   (semanticdb-enable-gnu-global-databases 'c++-mode))
 
-;; ;; ctags
-(when (cedet-ectag-version-check t)
-  (require 'semanticdb-ectag)
-  (semantic-load-enable-primary-exuberent-ctags-support))
-
 ;;; ede customization
 (require 'semantic-lex-spp)
 (global-ede-mode t)
@@ -131,3 +126,12 @@
 (add-to-list 'semantic-lex-c-preprocessor-symbol-file (concat qt4-base-dir "/Qt/qconfig.h"))
 (add-to-list 'semantic-lex-c-preprocessor-symbol-file (concat qt4-base-dir "/Qt/qconfig-dist.h"))
 (add-to-list 'semantic-lex-c-preprocessor-symbol-file (concat qt4-base-dir "/Qt/qglobal.h"))
+
+;; ctags
+(if (eq system-type 'darwin)
+    (setq semantic-ectag-program "/usr/local/bin/ctags"))
+
+;; ctags
+(when (cedet-ectag-version-check t)
+  (require 'semanticdb-ectag)
+  (semantic-load-enable-primary-exuberent-ctags-support))
